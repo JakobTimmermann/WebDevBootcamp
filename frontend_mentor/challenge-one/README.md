@@ -79,6 +79,11 @@ What I have not touched yet is relative positioning.
 - [Converting Colors](https://convertingcolors.com/) - This helped me to convert colors e.g. from HSL to HEX.  
 - [General Design and Color Gradient](https://bbbootstrap.com/snippets/bootstrap-5-credit-card-template-gradient-colors-14082895) - This come quite close to the Design that is required 
 - [Box-shadow examples](https://getcssscan.com/css-box-shadow-examples) - Provides a variety of different box-shadow designs
+
+### Loose Ends
+
+I was not able to get rid of the weird spacing inbetween the two cards in the mobile design (compare screenshot).
+
 ## Author
 
 - Github - [Jakob Timmermann](https://github.com/JakobTimmermann/)
