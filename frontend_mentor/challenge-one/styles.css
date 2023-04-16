@@ -1,16 +1,39 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    }
+body {
+    font-family: 'Hanken Grotesk';
+}
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-    }
+p {
+    font-size: calc(14px + 0.2vw);
+    font-weight: 500;
+    color: hsl(241, 100%, 89%);
+}
+
+h1 {
+    font-size: calc(40px + 0.5vw);
+    font-weight: 800;
+}
+
+h4 {
+    font-size: calc(25px + 0.5vw);
+    font-weight: 700;
+}
+
+h5 {
+    font-size: calc(15px + 0.5vw);
+    font-weight: 700;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
 
 .result-card {
     text-align: center;
-    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
     color: white;
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
     border-radius: 20px;
     height: calc(350px + 5vw);
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -23,6 +46,12 @@
     margin: auto;
     margin-top: 35px;
 }
+
+.result-text {
+    padding: 0% 7% 6% 7%;
+    margin-top: 20px;
+}
+
 .summary-card {
     color: hsl(224, 30%, 27%);
     border-radius: 20px;
@@ -30,59 +59,18 @@
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     margin-left: 5px;
 }
-.big-heading {
-margin-top: 30px;
-margin-left: 30px;
-margin-right: 30px;
-margin-bottom: 0px;
-}
-.small-heading {
-margin-top: 30px;
-margin-left: 30px;
-margin-right: 30px;
-margin-bottom: 20px;
 
+.heading {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
 }
 
 .scores {
-margin: 15px;
-padding: 10px 15px 10px 15px;
-border-radius: 10px;
-}
-
-p {
-font-size: calc(14px + 0.2vw);
-font-weight: 500;
-color: hsl(241, 100%, 89%);
-}
-
-h1 {
-font-weight: 800;
-margin-top: 20px;
-font-size: calc(40px + 0.5vw);
-}
-
-h4 {
-font-weight: 700;
-margin-left: 20px;
-font-size: calc(25px + 0.5vw);
-}
-
-h5 {
-font-weight: 700;
-margin-left: 10px;
-font-size: calc(15px + 0.5vw);
-}
-
-body {
-    font-family: 'Hanken Grotesk';
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
-  align-items: center;
+    margin: 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
 }
 
 .alignleft {
@@ -94,49 +82,44 @@ body {
 }
 
 .light-red {
-margin-top: 35px;
-background-color:  hsla(0, 100%, 67%, 0.1);
+    margin-top: 35px;
+    background-color:  hsla(0, 100%, 67%, 0.1);
 }
 
 div.light-red > p {
-color:  hsl(0, 100%, 67%);
+    color:  hsl(0, 100%, 67%);
 }
 
 .cobalt-blue {
-background-color: hsla(234, 85%, 45%, 0.1);
+    background-color: hsla(234, 85%, 45%, 0.1);
 }
 
 div.cobalt-blue> p {
-color: hsl(234, 85%, 45%);
+    color: hsl(234, 85%, 45%);
 }
 
 .green-teal {
-background-color: hsla(166, 100%, 37%, 0.1);
+    background-color: hsla(166, 100%, 37%, 0.1);
 }
 
 div.green-teal > p {
-color: hsl(166, 100%, 37%);
+    color: hsl(166, 100%, 37%);
 }
 
 .orangy-yellow {
-background-color: hsla(39, 100%, 56%, 0.1);
+    background-color: hsla(39, 100%, 56%, 0.1);
 }
 div.orangy-yellow > p {
-color: hsl(39, 100%, 56%);
+    color: hsl(39, 100%, 56%);
 }
 
 .score-achieved {
-color: hsla(224, 30%, 27%, 0.7);
-}
-
-.result-text {
-padding: 0% 7% 6% 7%;
-margin-bottom: 0px;
+    color: hsla(224, 30%, 27%, 0.7);
 }
 
 .button-style{
-border-radius: 50px;
-  width: 100%;
+    border-radius: 50px;
+    width: 100%;
 }
 
 .button-style:hover {
@@ -144,33 +127,33 @@ border-radius: 50px;
 }
 
 .button-align {
-text-align: center;
-margin-left: 15px;
-margin-top: 20px;
-margin-right: 15px;
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
 }
 
 @media (max-width: 575px) {
-  .result-card {
-  border: 0px;
-  border-radius: 35px;
-  border-top-right-radius:0px;
-  border-top-left-radius:0px;
-  }
-  .result-text {
-    padding: 0% 10% 6% 10%;
-  }
-  .small-width-margin{
-  margin-left: 40px;
-  margin-right: 40px;
-  }
-  div.summary-card > .big-heading {
-  margin-left: 80px;
-  }
-  .alignright {
-  padding-right: 30px;
-  }
-  .alignleft {
-  padding-left: 30px;
-  }
+    .result-card {
+        border: 0px;
+        border-radius: 35px;
+        border-top-right-radius:0px;
+        border-top-left-radius:0px;
+    }
+    .result-text {
+        padding: 0% 10% 6% 10%;
+    }
+    .small-width-margin{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    div.summary-card > .big-heading {
+        margin-left: 80px;
+    }
+    .alignright {
+        padding-right: 30px;
+    }
+    .alignleft {
+        padding-left: 30px;
+    }
 }
