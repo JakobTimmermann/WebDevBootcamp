@@ -1,0 +1,22 @@
+.big-title {
+    font-size: 100px;
+    color: blue;
+}
+
+.margin-50 {
+    margin: 20px;
+}
+
+h1 {
+    padding: 10px;
+    width: 25%;
+}
+
+.so-cool {
+    padding 20px;
+    color:darkmagenta;
+    background-color:gold;
+    text-align: center;
+    width: 10%;
+    border-radius: 20px;
+}

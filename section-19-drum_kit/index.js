@@ -31,9 +31,9 @@ function convertCharIntoSound(char) {
         default:
             break;
     }
-};
+}
 
-function buttonAnimation (char) {
+function buttonAnimation(char) {
     if (["w", "a", "s", "d", "j", "k", "l"].includes(char)) {
         var activeButton = document.querySelector("." + char);
         activeButton.classList.add("pressed");
@@ -46,17 +46,16 @@ function buttonAnimation (char) {
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        var buttonText = this.textContent;
-        convertCharIntoSound(buttonText);
-        buttonAnimation(buttonText);
-    });
-
+    document
+        .querySelectorAll(".drum")
+        [i].addEventListener("click", function () {
+            var buttonText = this.textContent;
+            convertCharIntoSound(buttonText);
+            buttonAnimation(buttonText);
+        });
 }
 
 document.addEventListener("keydown", function (event) {
     convertCharIntoSound(event.key);
     buttonAnimation(event.key);
 });
-
-convertCharIntoSound()
