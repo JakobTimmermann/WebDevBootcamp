@@ -1,0 +1,28 @@
+body {
+    background-color: #F7DB6A;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.main-div {
+    width: 400px;
+    margin: auto;
+    margin-top:40px;
+    text-align: center;
+    color: #D864A9;
+}
+.image {
+    width: 100%;
+    border: 4px solid #D864A9;
+}
+
+p {
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    margin-top: 25px;
+    text-transform: uppercase;  
+    font-size: 25px;
+}
