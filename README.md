@@ -11,6 +11,12 @@ This is the (more up-to-date) alternative to the nodemon package, yet with a cou
 npm install --save-dev @types/node
 ```
 
-### Shortcut for Visual Studio Code
+## Shortcut for Visual Studio Code
 - Ctrl + k (switch to terminal)
 - Ctrl + j (switch to editor)
+
+
+## Div Layout
+- CSS Grid is good for tables with rows and columns ![](./css-grid.png)
+- CSS Flexbox is good when divs have to be ordered in one dimension (horizontal or vertical) ![](css-flexbox.png)
+- Bootstrap Framework predefined CSS classes built on top of Flexbox  
