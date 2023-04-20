@@ -16,17 +16,27 @@ npm install --save-dev @types/node
 - Ctrl + j (switch to editor)
 
 
-## Div Layout
+## Content Layout
 ### CSS Flexbox 
 <img src="css-flexbox.png" alt= “” width="70%" height="70%" style="width: calc(25rem + 10vw) ">
 
 [Cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)  
 [CSS Frog Game](https://appbrewery.github.io/flexboxfroggy/)  
-Works good when divs have to be ordered in one dimension (horizontal or vertical).  
+Works good when divs have to be ordered in **one dimension (horizontal or vertical)**.  
 Some features to know: 
 - flex-wrap: wrap/nowrap --> Make sure items are wrapped if they don't fit on screen. (set on parent/container)
 - justify-content: flex-start/flex-end/center/space-between/space-around --> align flexbox elements along main axis. (set on parent/container)
 - align-items: flex-start/.. --> align elements along the cross axis only affects the layout if height of container is set. (set on parent/containter)  
+
 ### CSS Grid 
-Good for tables with rows and columns ![](./css-grid.png)
+
+<img src="css-grid.png" alt= “” width="70%" height="70%" style="width: calc(25rem + 10vw) ">
+
+Works good when divs have to be ordered in **two dimensions** e.g. for tables with rows and columns.  
+
+Some features to know:
+- 
+
+
+### Bootstrap Framework
 - Bootstrap Framework predefined CSS classes built on top of Flexbox  
