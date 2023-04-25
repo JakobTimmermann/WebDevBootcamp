@@ -1,4 +1,4 @@
-## Commands to not forget
+# Commands to not forget
 ### Start server.js in node watch mode
 ```bash
 node --watch server.js
@@ -15,8 +15,62 @@ npm install --save-dev @types/node
 - Ctrl + k (switch to terminal)
 - Ctrl + j (switch to editor)
 
+# EJS with Express
+## Setup 
+```bash
+mkdir views
+touch views/<page>.ejs
+```
+## Importing Functions
+Either the express module is then included like this
+```js
+const express = require("express");
+```
+or more "pythonic" via (requires adding ```type="module"``` to the package.json file)
+```js
+import express from "express";
+```
+Either way the express app is then initialized via
+```js
+const app = express();
 
-## Content Layout
+app.set('view engine', 'ejs');
+
+app.get("/", (req, res) => {
+    var Foo = "Test";
+    res.render("<page>.ejs" {foo: Foo}); 
+});
+```
+This will send the content of var Foo to the .ejs file stored in the views folder. Inside .ejs files the variables are triggered inside ```<% %>```, e.g.,
+```html
+<!DOCTYPE html>
+(...)
+<body>
+    <h1>The variable will be shown here:<%= foo %></h1>
+</body>
+</html>
+```
+In general the ```<% %>``` tags have to be put around every line of Javascript code inside the html template:
+```html
+    <% if (["Sunday","Saturday"].includes(currentDay)) { %>
+        <h1 style="color:purple"><%=currentDay %></h1>
+    <%} else { %>
+        <h1 style="color:green"><%=currentDay %></h1>
+    <% } %>
+```
+## Exporting Functions, Variables etc
+
+Exporting functions or variables or whatever is necessary to make those available for other scripts via the import (see above).  
+Export can again be done two ways. Either the "older" way with:
+```js
+exports.getDay = function () {...};
+```
+or the "newer" modular way (again with adding ```type="module"``` to the package.json file)
+```js
+export function getDay () {...};
+```
+
+# Web-Layout
 ### CSS Flexbox 
 <img src="css-flexbox.png" alt= “” width="70%" height="70%" style="width: calc(25rem + 10vw) ">
 
