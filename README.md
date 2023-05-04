@@ -10,7 +10,10 @@ This is the (more up-to-date) alternative to the nodemon package, yet with a cou
 ```bash
 npm install --save-dev @types/node
 ```
-
+## Install packages from dependencies in package.json
+```bash
+npm install
+```
 ## Shortcut for Visual Studio Code
 - Ctrl + k (switch to terminal)
 - Ctrl + j (switch to editor)

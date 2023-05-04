@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+<h1>Home</h1>
+<p><%= startingText%></p>
+    <div class="box">
+        <% for (i in posts) { %>
+            <h3><%=  posts[i].title %></h3>
+            <p><%= posts[i].body%></p>
+        <% } %>
+    </div>
+<%- include("partials/footer") %>
