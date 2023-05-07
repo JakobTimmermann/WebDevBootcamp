@@ -72,7 +72,9 @@ or the "newer" modular way (again with adding ```type="module"``` to the package
 ```js
 export function getDay () {...};
 ```
-
+# Usufull packages (and what I used them for)
+- [Lodash](https://lodash.com/): A modern JavaScript utility library delivering modularity, performance & extras.  
+So far I used it to convert strings into lowercase. 
 # Web-Layout
 ### CSS Flexbox 
 <img src="css-flexbox.png" alt= “” width="70%" height="70%" style="width: calc(25rem + 10vw) ">

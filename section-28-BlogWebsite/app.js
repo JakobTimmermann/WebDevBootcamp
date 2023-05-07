@@ -1,7 +1,16 @@
 const express = require("express");
-
+var _ = require('lodash');
 const app = express();
 const port = 3000;
+
+function truncate(input) {
+  const threshold = 80;
+  if (input.length > threshold) {
+    return input.substring(0, threshold) + ' ...';
+  }
+  return input;
+};
+
 
 app.set("view engine", "ejs");
 // Don't exactly know why I have to manually set the views folder but otherwise it will look
@@ -45,16 +54,21 @@ app.post("/compose", (req, res) => {
   const post = {
     title: req.body.postTitle,
     body: req.body.postBody,
+    truncatedBody: truncate(req.body.postBody),
   };
   posts.push(post);
   res.redirect("/");
 });
 
 app.get("/posts/:post", (req, res) => {
-  console.log(posts);
-  console.log(req.params.post);
-  if (req.params.post in posts) {
-    console.log("Match found")
+  const requestedPost = _.lowerCase(req.params.post);
+  for (post of posts) {
+    if (requestedPost === _.lowerCase(post.title)) {
+      res.render("post", {
+        title: post.title,
+        content: post.body
+      })
+    };
   };
 });
 

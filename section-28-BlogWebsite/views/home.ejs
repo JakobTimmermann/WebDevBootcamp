@@ -4,7 +4,7 @@
     <div class="box">
         <% for (i in posts) { %>
             <h3><%=  posts[i].title %></h3>
-            <p><%= posts[i].body%></p>
+            <p><%= posts[i].truncatedBody%> <a href="/posts/<%= posts[i].title %>">Read More</a></p>
         <% } %>
     </div>
 <%- include("partials/footer") %>
