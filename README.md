@@ -18,6 +18,14 @@ npm install
 - Ctrl + k (switch to terminal)
 - Ctrl + j (switch to editor)
 
+## MongoDB
+Start, check and stop mongo db server
+```bash
+sudo systemctl start mongod
+sudo systemctl status mongod
+sudo systemctl stop mongod
+```
+
 # EJS with Express
 ## Setup 
 ```bash
