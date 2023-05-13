@@ -26,6 +26,26 @@ sudo systemctl status mongod
 sudo systemctl stop mongod
 ```
 
+## Avoid to push hard-coded passwords/APIs/accounts etc
+Passwords etc. can be stored in config files which than act like   environmental variables in python.   
+Generate a config/dev.env and add critial information like that
+```vim
+ADMIN_ACCOUNT=ThisIsAnAccountName
+ADMIN_PASSWORD=Aligathor3
+```
+Then install env-cmd and adjust package.json file (assuming that the javascript file is named app.js):
+```json
+"scripts": {
+            ...
+            "start": "env-cmd -f ./config/dev.env node app.js"
+            }
+```
+Then the application can be run via
+```bash
+npm start
+``` 
+
+
 # EJS with Express
 ## Setup 
 ```bash

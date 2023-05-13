@@ -1,7 +1,3 @@
-import {
-    getDate,
-    getDay
-} from "./date.js"; // Loading local modules
 import express from 'express';
 import mongoose from "mongoose";
 import _ from "lodash";
@@ -16,7 +12,9 @@ app.use(express.urlencoded({
 app.use(express.static("public")); // Upload static files in public folder!
 
 // Update ToDo Storage to Mongoose!
-mongoose.connect('mongodb://localhost:27017/todoListDB');
+//mongoose.connect('mongodb://localhost:27017/todoListDB');
+mongoose.connect(`mongodb+srv://${process.env.ADMIN_ACCOUNT}:${process.env.ADMIN_PASSWORD}@daisyduke.iusbkik.mongodb.net/todoListDB`);
+
 const itemsSchema = new mongoose.Schema({
     name: {
         type: String,
