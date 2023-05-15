@@ -2,9 +2,9 @@
 <h1>Home</h1>
 <p><%= startingText%></p>
     <div class="box">
-        <% for (i in posts) { %>
-            <h3><%=  posts[i].title %></h3>
-            <p><%= posts[i].truncatedBody%> <a href="/posts/<%= posts[i].title %>">Read More</a></p>
+        <% for (post of posts) { %>
+            <h3><%=  post.title %></h3>
+            <p><%= post.truncatedBody%> <a href="/posts/<%= post._id.valueOf()%>">Read More</a></p>
         <% } %>
     </div>
 <%- include("partials/footer") %>
